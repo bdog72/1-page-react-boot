@@ -14,12 +14,17 @@ import {browserHistory, Router, Route} from 'react-router'
 // import {browserHistory, Router, Route} from 'react-router-bootstrap'
 import Layout from './Layout'
 import Home from './Home'
+import Contact from './Contact'
+import About from './About'
 export default class App extends Component {
 
   render () {
     return <Router history={browserHistory}>
       <Route component={Layout}>
         <Route path='/' component={Home} />
+        <Route path='/Contact' component={Contact} />
+        <Route path='/About' component={About} />
+
       </Route>
     </Router>
   }
