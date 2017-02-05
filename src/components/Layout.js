@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router'
-// import { LinkContainer } from 'react-router-bootstrap'
-// import { Button } from 'react-bootstrap'
+import { Menu } from 'semantic-ui-react'
 export default class Layout extends Component {
 
   static propTypes = {
@@ -11,15 +10,12 @@ export default class Layout extends Component {
     return <div>
       <nav>
         <ul>
-          {/* <LinkContainer to={ pathname: '/' }>
-            <Button bsSize='large' />
-          </LinkContainer>
-          <LinkContainer>
-            <Button bsSize='large' />
-          </LinkContainer>
-          <LinkContainer>
-            <Button bsSize='large' />
-          </LinkContainer> */}
+          {/* semantic-ui-react Links */}
+          <Menu>
+            <Menu.Item as={Link} to='/'>Home</Menu.Item>
+            <Menu.Item as={Link} to='/Contact'>Contact</Menu.Item>
+            <Menu.Item as={Link} to='/About'>About</Menu.Item>
+          </Menu>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/Contact'>Contact</Link></li>
           <li><Link to='/About'>About</Link></li>
